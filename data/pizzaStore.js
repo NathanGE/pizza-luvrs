@@ -2,7 +2,8 @@ const Sequelize = require('sequelize');
 
 const database = 'pizza_luvrs';
 const host = 'pizza-db.cfctvntsqroe.us-east-2.rds.amazonaws.com';
-const password = 'fell400burp!';
+const username = 'username';
+const password = "password";
 
 const pgClient = new Sequelize(
     database,
@@ -16,7 +17,7 @@ const pgClient = new Sequelize(
 
 const Pizza = pgClient.define('pizza', {
     id: {
-        type: Sequalize.STRING,
+        type: Sequelize.STRING,
         primaryKey: true,
     },
     name: {
